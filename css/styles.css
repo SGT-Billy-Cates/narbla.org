@@ -1,0 +1,339 @@
+/* ====== Global Styles ====== */
+:root {
+  --color-primary: #123c69; /* deep blue for headers/nav */
+  --color-secondary: #1b6ca8; /* brighter blue for links/buttons */
+  --color-accent: #b89b64; /* accent for highlights */
+  --color-light: #f9f7f3; /* page background */
+  --color-dark: #2f2f2f; /* text color */
+  --color-white: #ffffff; /* white text */
+  --font-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Container ====== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ====== Header ====== */
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-accent);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 70px;
+}
+
+.brand-text h1 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.brand-text .tagline {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+
+/* ====== Navigation ====== */
+.main-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav .nav-list li a {
+  font-weight: 600;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+
+.main-nav .nav-list li a.active,
+.main-nav .nav-list li a:hover {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* ====== Hero Section ====== */
+.page-hero {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.page-hero h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ====== Forms ====== */
+form.form {
+  background-color: var(--color-white);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.auth-card {
+  max-width: 450px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* ====== Archive Items ====== */
+.archive-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.archive-item {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.archive-item h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.archive-item p {
+  margin-bottom: 12px;
+  color: var(--color-dark);
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.site-footer a {
+  color: var(--color-accent);
+}
+
+.footer-nav a {
+  margin: 0 10px;
+}
+
+/* ====== Back to Top Button ====== */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#backToTop:hover {
+  background-color: var(--color-accent);
+}
+
+/* ====== Misc ====== */
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .archive-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* ====== Logo Adjustments ====== */
+.site-header .logo {
+  height: 100px; /* Enlarged logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Keep logo aligned left and header flex */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* logo on the left */
+  gap: 20px;
+}
+
+/* Adjust brand text next to logo */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== Conference Gallery ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* 3-4 images side by side depending on screen */
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 250px; /* uniform size for all conference images */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ====== Hero Media Image ====== */
+.hero-media img {
+  width: 100%;
+  max-width: 250px; /* match gallery images */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ====== Responsive Adjustments ====== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr; /* stack images on mobile */
+  }
+
+  .hero-media img {
+    max-width: 100%;
+  }
+}
+/* ====== Guidelines Banner ====== */
+.guidelines-banner {
+  width: 50%; /* make image half the size */
+  max-width: 450px; /* optional: prevents it from getting too large on big screens */
+  height: auto; /* maintain aspect ratio */
+  display: block;
+  margin: 25px auto; /* center the image */
+  border-radius: 8px; /* optional: soft corners */
+}
+
+/* ====== Responsive Adjustments ====== */
+@media (max-width: 768px) {
+  .guidelines-banner {
+    width: 80%; /* make slightly larger on small screens */
+    max-width: none;
+  }
+}

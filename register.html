@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NARBLA Annual Conference Registration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="narbla-logo.png" alt="NARBLA Logo" class="logo" />
+      <h1>NARBLA Annual Conference Registration</h1>
+      <h2>Saturday, April 11, 2026</h2>
+      <p>Fill out the registration form below.</p>
+    </header>
+
+    <main>
+      <form class="container form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="affiliation">School / Affiliation:</label>
+        <input type="text" id="affiliation" name="affiliation" required />
+
+        <label for="address">Mailing Address:</label>
+        <textarea id="address" name="address" rows="2" required></textarea>
+
+        <label for="phone">Telephone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <fieldset class="checkbox-group">
+          <legend>Attendance & Payment</legend>
+          <label
+            ><input type="checkbox" /> I plan to attend and enclosed payment for
+            registration, dues, and lunch.</label
+          >
+          <label><input type="radio" name="rate" /> Regular Rate ($90)</label>
+          <label
+            ><input type="radio" name="rate" /> Special Emeritus Rate
+            ($70)</label
+          >
+          <label
+            ><input type="radio" name="rate" /> Special Newcomer Rate
+            ($70)</label
+          >
+          <label><input type="radio" name="rate" /> Publisher Rate ($90)</label>
+          <label
+            ><input type="checkbox" /> I do not attend but enclosed $25 for
+            dues.</label
+          >
+          <label
+            ><input type="checkbox" /> I plan to attend luncheon. Dietary
+            needs:</label
+          >
+          <textarea rows="2"></textarea>
+          <label
+            ><input type="checkbox" /> I would like to present a topic. Topic
+            title:</label
+          >
+          <textarea rows="2"></textarea>
+          <label
+            ><input type="checkbox" /> Bringing guest(s). Number of
+            guests:</label
+          >
+          <input type="text" placeholder="Enter number of guests" />
+          <label
+            ><input type="checkbox" /> Willing to be Program Chair for April
+            2027.</label
+          >
+        </fieldset>
+
+        <p class="info-block">
+          <strong>Return form with payment by Friday, April 3, 2026 to:</strong
+          ><br />
+          Prof. Leslie Garbarino<br />
+          Babson College, Luksic Hall<br />
+          231 Forest Street, Babson Park, MA 02457<br />
+          Phone: 781-239-4275<br />
+          Email:
+          <a href="mailto:LGarbarino@babson.edu">LGarbarino@babson.edu</a>
+        </p>
+
+        <button type="submit" class="btn primary">Submit Registration</button>
+      </form>
+    </main>
+
+    <footer class="site-footer container">
+      <p>
+        &copy; <span id="year"></span> NARBLA — North Atlantic Regional Business
+        Law Association
+      </p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script src="js/app.js"></script>
+  </body>
+</html>

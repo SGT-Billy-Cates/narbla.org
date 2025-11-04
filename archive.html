@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Archives — NARBLA</title>
+    <meta
+      name="description"
+      content="Download past NARBLA conference slides, recordings, and Business Law Review archives."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand centered-logo">
+          <img src="narbla-logo.png" alt="NARBLA logo" class="logo" />
+          <div class="brand-text">
+            <h1>NARBLA</h1>
+            <p class="tagline">Connecting Members Nationwide</p>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conferences.html">Conferences</a></li>
+            <li><a href="archive.html" class="active">Archives</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero">
+        <h2>Conference Archives</h2>
+        <p>Download slides, recordings, and summaries from previous events.</p>
+      </section>
+
+      <section class="archive-list" id="archiveList">
+        <!-- Archive items will be inserted here by JavaScript -->
+      </section>
+
+      <section class="archives container">
+        <h2>Business Law Review Archives</h2>
+        <ul>
+          <li>
+            <a href="guidelines.html"
+              >Guidelines and Format for Business Law Review Articles (2026)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.husson.edu/college-of-business/publications-from-the-cob/businesslawreview"
+              target="_blank"
+              >Full Text (2005–Present): Business Law Review Archive</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2>Contact NARBLA</h2>
+        <p>Questions about archives or past conferences? Reach out below.</p>
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          class="form"
+        >
+          <label>Full Name<input type="text" name="name" required /></label>
+          <label>Email<input type="email" name="_replyto" required /></label>
+          <label
+            >Message<textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> NARBLA — North Atlantic Regional
+          Business Law Association
+        </p>
+        <nav class="footer-nav">
+          <a href="#">Privacy</a> • <a href="#">Terms</a> •
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const archives = [
+          { title: "Fall Symposium 2024 — Slides", date: "Nov 2024", url: "#" },
+          {
+            title: "Spring Workshop 2024 — Recording",
+            date: "Mar 2024",
+            url: "#",
+          },
+        ];
+        const list = document.getElementById("archiveList");
+        archives.forEach((a) => {
+          const div = document.createElement("div");
+          div.className = "archive-item";
+          div.innerHTML = `
+          <h3>${a.title}</h3>
+          <p>${a.date}</p>
+          <p><a href="${a.url}" class="btn">Download</a></p>
+        `;
+          list.appendChild(div);
+        });
+      });
+    </script>
+  </body>
+</html>

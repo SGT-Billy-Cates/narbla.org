@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Member Login — NARBLA</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header container header-inner">
+      <img src="narbla-logo.png" alt="NARBLA logo" class="logo" />
+      <h1>Member Login</h1>
+    </header>
+
+    <main class="container auth">
+      <div class="auth-card">
+        <h2>Sign In</h2>
+        <p>
+          If you are a member, enter your credentials below. New members can
+          register.
+        </p>
+
+        <form id="loginForm" class="form">
+          <label>Email<input type="email" name="email" required /></label>
+          <label
+            >Password<input type="password" name="password" required
+          /></label>
+          <div class="auth-actions">
+            <button type="submit" class="btn primary">Sign In</button>
+            <a href="register.html" class="btn secondary">Register</a>
+          </div>
+        </form>
+
+        <hr />
+        <p class="small">
+          For secure login, use <strong>Firebase Authentication</strong> or your
+          own server. See README for setup instructions.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer container">
+      <p>&copy; <span id="year"></span> NARBLA</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+    <script src="js/app.js"></script>
+  </body>
+</html>

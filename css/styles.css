@@ -44,7 +44,7 @@ a:hover {
   background-color: var(--color-white);
   border-bottom: 2px solid var(--color-accent);
   padding: 15px 0;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1000;
 }
@@ -337,3 +337,4 @@ p {
     max-width: none;
   }
 }
+
